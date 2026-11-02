@@ -3,7 +3,10 @@ import numpy as np
 import cv2
 from PIL import Image
 from matplotlib import colormaps as cm
-from policy_network import NavDP_Policy
+if __package__:
+    from .policy_network import NavDP_Policy
+else:
+    from policy_network import NavDP_Policy
 
 class NavDP_Agent:
     def __init__(self,

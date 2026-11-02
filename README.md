@@ -1,3 +1,8 @@
+# Python inference package (fork)
+
+See [PACKAGING.md](PACKAGING.md) for uv installation and package maintenance.
+The upstream documentation below is preserved.
+
 <p align="center">
 <h1 align="center"><strong>NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance</strong></h1>
   <p align="center">

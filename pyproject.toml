@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "navdp-policy"
+version = "0.1.0"
+description = "NavDP inference policy, packaged from InternRobotics/NavDP"
+readme = "PACKAGING.md"
+requires-python = ">=3.10"
+license = "CC-BY-NC-SA-4.0 AND Apache-2.0"
+license-files = ["LICENSE", "NOTICE.md", "baselines/navdp/depth_anything/LICENSE"]
+dependencies = [
+    "diffusers==0.33.1",
+    "matplotlib>=3.8,<4",
+    "numpy>=1.26,<3",
+    "opencv-python>=4.6,<5",
+    "pillow>=10",
+    "torch>=2.2,<3",
+    "torchvision>=0.17,<1",
+]
+
+[project.urls]
+Upstream = "https://github.com/InternRobotics/NavDP"
+Repository = "https://github.com/SikongJueluo/NavDP"
+
+[tool.hatch.build.targets.wheel]
+only-include = [
+    "baselines/navdp/__init__.py",
+    "baselines/navdp/policy_agent.py",
+    "baselines/navdp/policy_network.py",
+    "baselines/navdp/policy_backbone.py",
+    "baselines/navdp/depth_anything/depth_anything_v2",
+    "baselines/navdp/depth_anything/LICENSE",
+]
+
+[tool.hatch.build.targets.wheel.sources]
+"baselines/navdp" = "navdp_policy"
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+    "pyproject.toml",
+    "PACKAGING.md",
+    "NOTICE.md",
+    "LICENSE",
+    "tests",
+    "baselines/navdp/__init__.py",
+    "baselines/navdp/policy_agent.py",
+    "baselines/navdp/policy_network.py",
+    "baselines/navdp/policy_backbone.py",
+    "baselines/navdp/depth_anything/depth_anything_v2",
+    "baselines/navdp/depth_anything/LICENSE",
+]

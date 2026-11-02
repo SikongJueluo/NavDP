@@ -10,3 +10,7 @@ __pycache__
 assets/scenes/Materials/*
 assets/scenes/SkyTexture/*
 assets/scenes/embodiedscan/*
+
+/dist/
+/.venv/
+/uv.lock

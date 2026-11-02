@@ -1,0 +1,4 @@
+[submodule "baselines/logoplanner/Pi3"]
+	path = baselines/logoplanner/Pi3
+	url = https://github.com/yyfz/Pi3.git
+	update = none
